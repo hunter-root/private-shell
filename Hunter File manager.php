@@ -172,7 +172,7 @@ clearstatcache();
 
 echo "<div class='container'>";  // Wrapping all content inside a container with 90% width
 echo "<div class='header'>";
-echo "<h1>██▓▒­░⡷⠂@𝙰𝚗𝚘𝚗𝚢𝚖𝚘𝚞𝚜_𝙿𝚛𝚘𝚓𝚎𝚌𝚝𝚜 𝙵𝚒𝚕𝚎 𝚖𝚊𝚗𝚊𝚐𝚎𝚛⠐⢾░▒▓██</h1>"; // The Title Added here
+echo "<h1>一═デ︻ Hunter File Manager ︻デ═一</h1>"; // The Title Added here
 echo "<p>Server: " . $_SERVER['SERVER_NAME'] . "<br>";
 echo "Current Directory: " . getcwd() . "<br>";
 echo "Software: " . $_SERVER['SERVER_SOFTWARE'] . "</p>";
