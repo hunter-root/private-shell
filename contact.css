@@ -145,9 +145,9 @@ tr:hover {
 .sidebar {
     position: fixed;
     top: 50px;
-    right: -250px;       /* hidden initially */
-    width: 250px;        /* smaller width */
-    max-height: 90%;     /* prevent covering full screen */
+    right: -200px;       /* hidden initially */
+    width: 200px;        /* smaller width */
+    max-height: 70%;     /* prevent covering full screen */
     background-color: #f2f2f2;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     transition: right 0.3s ease-in-out;
@@ -273,3 +273,4 @@ tr:hover {
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
