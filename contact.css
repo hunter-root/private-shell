@@ -147,8 +147,8 @@ tr:hover {
 .sidebar {
     position: fixed;
     top: 50px;
-    right: -250px;       /* hidden initially */
-    width: 250px;        /* smaller width */
+    right: -150px;       /* hidden initially */
+    width: 150px;        /* smaller width */
     max-height: 60%;     /* prevent covering full screen */
     background-color: #f2f2f2;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -320,4 +320,5 @@ tr:hover {
         max-width: 100%;
     }
 }
+
 
