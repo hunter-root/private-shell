@@ -146,7 +146,7 @@ tr:hover {
 /* -------------------- Sidebar -------------------- */
 .sidebar {
     position: fixed;
-    top: 50px;
+    top: 20px;
     right: -250px;       /* hidden initially */
     width: 250px;        /* smaller width */
     max-height: 90%;     /* prevent covering full screen */
@@ -320,3 +320,4 @@ tr:hover {
         max-width: 100%;
     }
 }
+
