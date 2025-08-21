@@ -1,26 +1,24 @@
 /* -------------------- General Styles -------------------- */
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #0d0d0d; /* dark background */
-    color: #00ff00;            /* neon green text */
+    background-color: #f9f9f9;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #00ff00;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #00ff00;
-    background-color: #111; /* darker inner container */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #fff;
     position: relative;
 }
 
 h1 {
     text-align: center;
-    color: #00ff00;
 }
 
 /* -------------------- Tables -------------------- */
@@ -30,16 +28,15 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #00ff00;
+    border: 1px solid black;
 }
 
 th, td {
-    padding: 6px;
-    color: #00ff00;
+    padding: 5px;
 }
 
 tr:hover {
-    background-color: #002200; /* dark green hover */
+    background-color: #f9f9f9;
 }
 
 /* -------------------- Breadcrumb -------------------- */
@@ -48,7 +45,7 @@ tr:hover {
 }
 
 .breadcrumb a {
-    color: #00ff00;
+    color: blue;
     text-decoration: none;
 }
 
@@ -59,12 +56,9 @@ tr:hover {
 /* -------------------- Textarea -------------------- */
 .edit-file textarea {
     width: 100%;
-    border: 2px solid #00ff00;
-    background-color: #111;
-    color: #00ff00;
+    border: 2px solid black;
     padding: 5px;
     box-sizing: border-box;
-    font-family: 'Courier New', monospace;
 }
 
 /* -------------------- Upload & Command Forms -------------------- */
@@ -82,19 +76,25 @@ tr:hover {
 
 /* -------------------- Command Output -------------------- */
 .command-output {
-    background-color: #111;
-    color: #00ff00;
+    background-color: #f2f2f2;
+    color: black;
     padding: 10px;
-    font-family: 'Courier New', monospace;
+    font-family: monospace;
     white-space: pre-wrap;
-    border: 2px solid #00ff00;
+    border: 2px solid black;
     box-sizing: border-box;
     overflow-y: auto;
     height: 200px;
     width: 100%;
-    max-width: 900px;
+    max-width: 800px;
     margin-top: 10px;
-    box-shadow: 0 0 15px #00ff00;
+}
+
+@media (max-width: 600px) {
+    .command-output {
+        height: 150px;
+        max-width: 100%;
+    }
 }
 
 /* -------------------- Forms -------------------- */
@@ -112,80 +112,50 @@ tr:hover {
 }
 
 /* -------------------- Buttons -------------------- */
-.button, .summon-button, .dropbtn {
+.button {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 5px 9px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
     border-radius: 4px;
     margin-right: 5px;
-    font-family: 'Courier New', monospace;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    border: 1px solid #00ff00;
-    transition: all 0.2s ease-in-out;
-}
-
-.button {
-    background-color: #111;
-    color: #00ff00;
-}
-
-.button:hover {
-    background-color: #00ff00;
-    color: #111;
-    box-shadow: 0 0 10px #00ff00;
 }
 
 .summon-button {
-    background-color: #111;
-    color: red;
-    border-color: red;
-}
-
-.summon-button:hover {
+    display: inline-block;
+    padding: 6px 10px;
     background-color: red;
-    color: #111;
-    box-shadow: 0 0 10px red;
-}
-
-.dropbtn {
-    background-color: #111;
-    color: #00ff00;
-    border: 1px solid #00ff00;
-}
-
-.dropbtn:hover {
-    background-color: #00ff00;
-    color: #111;
-    box-shadow: 0 0 10px #00ff00;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    margin-right: 3px;
 }
 
 /* -------------------- Footer -------------------- */
 .footer {
     text-align: center;
-    max-width: 900px;
+    max-width: 800px;
     position: relative;
-    background-color: #111;
-    border: 1px solid #00ff00;
+    background-color: #fff;
+    border: 1px solid #ccc;
     padding: 20px;
     margin: 20px auto;
-    box-shadow: 0 0 15px #00ff00;
 }
 
 /* -------------------- Sidebar -------------------- */
 .sidebar {
     position: fixed;
     top: 50px;
-    right: -260px;
-    width: 260px;
-    max-height: 90%;
-    background-color: #111;
-    box-shadow: 0 0 15px #00ff00;
+    right: -250px;       /* hidden initially */
+    width: 250px;        /* smaller width */
+    max-height: 90%;     /* prevent covering full screen */
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     transition: right 0.3s ease-in-out;
     overflow-y: auto;
     padding: 15px;
     border-radius: 8px;
-    border: 1px solid #00ff00;
     z-index: 999;
 }
 
@@ -193,48 +163,34 @@ tr:hover {
     right: 0;
 }
 
-.sidebar h2 {
-    margin-top: 0;
-    color: #00ff00;
+.sidebar-content {
+    padding: 10px 0;
+}
+
+.sidebar-close {
+    text-align: right;
+    margin-bottom: 10px;
 }
 
 .sidebar-close button {
     padding: 5px 10px;
-    border: 1px solid #00ff00;
-    background-color: #111;
-    color: #00ff00;
+    border: none;
+    background-color: #ccc;
+    color: #fff;
     cursor: pointer;
 }
 
-.sidebar-close button:hover {
-    background-color: #00ff00;
-    color: #111;
-    box-shadow: 0 0 10px #00ff00;
+.sidebar h2 {
+    margin-top: 0;
 }
 
-/* -------------------- Info Boxes -------------------- */
-.info-box {
-    background-color: #111;
-    border: 1px solid #00ff00;
-    border-radius: 6px;
-    padding: 10px;
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
     margin-bottom: 10px;
-    font-size: 14px;
-    width: 100%;
-    max-width: 300px;
-    box-shadow: 0 0 10px #00ff00;
-}
-
-.info-box h3 {
-    margin: 0 0 5px 0;
-    font-size: 16px;
-    color: #00ff00;
-}
-
-.info-box p {
-    margin: 0;
-    font-size: 14px;
-    color: #00ff00;
 }
 
 /* -------------------- Hamburger Menu -------------------- */
@@ -244,14 +200,12 @@ tr:hover {
     right: 20px;
     width: 30px;
     height: 30px;
-    background-color: #111;
-    border: 1px solid #00ff00;
+    background-color: #ccc;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 10px #00ff00;
 }
 
 .menu-icon::before,
@@ -260,7 +214,7 @@ tr:hover {
     position: absolute;
     width: 20px;
     height: 2px;
-    background-color: #00ff00;
+    background-color: #fff;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -286,26 +240,83 @@ tr:hover {
     display: inline-block;
 }
 
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #111;
+    background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 0 10px #00ff00;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: #00ff00;
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #002200;
+    background-color: #f1f1f1;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* -------------------- Info Boxes -------------------- */
+.info-box {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.info-box h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 600px) {
+    .upload-cmd-container {
+        flex-direction: column;
+    }
+
+    .upload-form, .cmd-form {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .sidebar {
+        width: 80%;
+        max-height: 80%;
+    }
+
+    .info-box {
+        max-width: 100%;
+    }
 }
